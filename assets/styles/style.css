@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+/* Paramètre généraux */
+* {
+    padding: 0;
+    margin: 0;
+}
+*::selection {
+    background: #000101;
+    color: #fefeff;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: #fefeff;
+    color: #000101;
+}
+h3 {
+    font-size: calc(2rem + 3vw);
+    text-align: center;
+    color: #000101;
+    font-family: "font-bold", serif;
+    letter-spacing: 3px;
+}
+.title {
+    font-size: calc(1.5rem + 5vw);
+    letter-spacing: 0;
+}
+span {
+    display: inline-block;
+}
+.wrapper {
+    perspective: 900px;
+}
+.appear {
+    opacity: 0;
+    transform: translateY(100%) rotateX(-80deg);
+    transform-origin: top center;
+    transform-style: preserve-3d;
+    transition: 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.appear.is-inview {
+    transition-delay: 1s;
+    opacity: 1;
+    transform: none;
+}
+.line {
+    height: 2px;
+    width: 70%;
+    margin: 0 auto;
+    background: #000101;
+    transition: 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+    transition-delay: 0.15s;
+    opacity: 0;
+    transform: scaleX(0);
+}
+.line-wrapper.is-inview .line {
+    opacity: 1;
+    transform: scaleX(1);
+}
+/* Paramètre par ordre d'apparition */
+header {
+    position: relative;
+    margin: 2vw 2vw 0;
+}
+#h1-wrapper {
+    transition-delay: 0.3s;
+}
+h1 {
+    font-size: calc(1.5rem + 2.6vw);
+    margin-top: 70px;
+    font-family: 'Lobster', cursive;
+    letter-spacing: 6px;
+    color: #000101;
+}
+header h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: calc(2rem + 3vw);
+    margin: 18px;
+    text-align: center;
+}
+#h2-1 {
+    transition-delay: 1s;
+}
+.h2-wrapper {
+    mix-blend-mode: exclusion;
+    margin: -220px 0 200px;
+}
+.skills {
+    margin: 50px 0 50px;
+}
+.skills h2 {
+    margin-bottom: 150px;
+}
+.skills .wapper {
+    margin: 30px 0;
+}
+.skills .appear {
+    text-align: center;
+}
+.skills p {
+    font-size: calc(1rem + 3vw);
+    font-family: "font-bold", serif;
+    letter-spacing: 4px;
+    background: #000101;
+    color: #fefeff;
+    display: inline-block;
+    padding: 0 12px 12px;
+}
+section h4 {
+    font-size: calc(0.7rem + 1vw);
+    text-align: center;
+}
+/* Bootstrap */
+#section1 {
+    margin-top: 100px;
+}
+#carouselExampleDark {
+    width: calc(5rem + 50vw);
+    margin: 0 auto;
+}
